@@ -1,0 +1,101 @@
+# work on Terminal PC
+	pwd		print directory
+	ls		list stuf
+	mkdir	create a directory
+	cd		change directory
+	clear	clear the terminal
+
+# Install Python
+	https://www.python.org/
+
+# Install Git Bash
+	https://git-scm.com/download/win
+		install Git bas
+		remember to select your text editor
+
+# Create A Virtual Enviroment for PC
+	python -m venv virtual
+
+	# Activate Virtual Enviroment
+	source virtual/scripts/activate
+
+	# Deativate Virtual Enviroment
+	deactivate
+
+# Create a Virtual Enviroment for Mac
+	python -m venv virtual
+
+	#Activate Virtual Enviroment
+	source virtual/bin/activate
+
+	# Deativate Virtual Enviroment
+	deactivate
+
+# Install Django on virtual Eviroment Mac and PC
+	pip install django
+
+# How to check what is install
+	pip freeze
+
+# Start a project with django
+	django-admin.py startproject Nameoftheproject
+
+# Start webserver
+	python manage.py runserver
+	python manage.py migrate 
+
+# Github turn on
+	git config --global user.name "John Ferlito"
+	git config --global user.email "jjfcode@gmail.com"
+	git config --global push.default matching
+	git config --global alias.co checkout
+	git init
+
+	# Save our Code
+	git add .
+	git commit -am 'messaje'
+
+# Create a new directory to save our SSH
+	mkdir ~/.ssh
+	cd ~/.ssh
+	# Create a SSH
+		ssh-keygen.exe
+		# Copy SSH Ket to add it to GitHub
+		cat id_rsa.pub
+
+# Push an existing repository from the command line
+	git remote add origin git@github.com:Name of the repo
+	git push -u origin master
+
+# Install Heroku
+	https://devcenter.heroku.com/articles/heroku-cli
+	Download Installer
+	# Check Heroku Version
+		heroku --version
+
+# make our App work on heroku
+	pip install gunicorn
+	pip install django_heroku
+	pip install python-decouple
+	pip install dj_database_url
+
+	# Let Horuko know everyting we install create a File (requirements.txt)
+		pip freeze > requirements.txt
+
+	# Create a Procfile tell Horuko what type of app is
+		touch Procfile
+
+		# Open procfile and edit
+			web: gnicorn (name of the app.wsgi)
+
+		# add to seting.py
+			import django_heroku
+			import dj_database_url
+			from decouple import config
+			# on Middleware
+				'whitenoise.middleware,WhiteNoiseMiddleware',
+			# on statics
+				STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+				# On the botton
+					django_heroku.settings(locals())
+
