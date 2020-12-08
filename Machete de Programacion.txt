@@ -99,3 +99,5 @@
 				# On the botton
 					django_heroku.settings(locals())
 
+# Saransa
+
