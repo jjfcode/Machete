@@ -4,6 +4,7 @@
 	mkdir	create a directory
 	cd		change directory
 	clear	clear the terminal
+	touch	create file (sarasa.sas)
 
 # Install Python
 	https://www.python.org/
