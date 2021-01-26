@@ -1,0 +1,10 @@
+1. Live server 
+2. Prettier - code formater 
+3. Better comments 
+4. Bracket pair colorizer 
+5. ES6 Snippets
+6. ESLint 
+7. GitLens
+8. CSS Peak
+9. Code Spell Checker
+10. Material Theme
